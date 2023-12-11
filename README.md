@@ -1,6 +1,6 @@
 # Classy_Pose
 
-![Graphical_Abstract](https://github.com/vktrannguyen/Classy_Pose/blob/main/ClassyPose_GraphicalAbstract.tif)
+![Graphical_Abstract](https://github.com/vktrannguyen/Classy_Pose/blob/main/ClassyPose_GraphicalAbstract.jpg)
 
 You will find herein the code and data related to our paper:
 
