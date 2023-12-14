@@ -47,12 +47,46 @@ The scores that all ligand poses in the test and hard test sets received from ea
 2.6. The **clustering** sub-folder:
 
 - *all_Xtal_PLEC_IDs.csv*: the CSV file containing all PLEC fingerprints extracted from the co-crystallographic ligand poses (no redocked pose) of the 1,102 PDB entries retained for clustering.
-- **100_clusters.xlsx*: the clustering results of 1,102 PDB entries (100 clusters and their members) and their partition into the training set and the test set.
+- *100_clusters.xlsx*: the clustering results of 1,102 PDB entries (100 clusters and their members) and their partition into the training set and the test set.
 
 2.7. The **virtual_screening** sub-folder:
 
 Virtual screening results on five data sets whose targets are not part of the data used to train our ML models:
 
-- **PPARA_OTS**: an "own test set" featured in a recently published protocol<sup>[5]</sup>. Target: the peroxisome proliferator activated receptor alpha.
-- 
+- **PPARA_OTS**: an "own test set" featured in a recently published protocol<sup>[5]</sup>. Target: peroxisome proliferator activated receptor alpha.
+- **HXK4_DUD-E**: the HXK4 data set from the DUD-E data collection<sup>[6]</sup>. Target: hexokinase type IV.
+- **ROCK1_DUD-E**: the ROCK1 data set from the DUD-E data collection. Target: Rho-associated protein kinase 1.
+- **EGFR_DEKOIS2**: the EGFR data set from the DEKOIS2.0 data collection<sup>[7]</sup>. Target: the epidermal growth factor receptor.
+- **11BHSD1_DEKOIS2**: the 11betaHSD1 data set from the DEKOIS 2.0 data collection. Target: 11-beta-hydroxysteroid dehydrogenase 1.
 
+Inside each sub-folder listed above, you will find the following files:
+
+- The mol2 files containing the structure of the unliganded protein target and that of the crystallographic ligand pose, stored separately.
+- The zipped mol2 file containing all docking poses of the successfully docked ligands in each data set.
+- The scores of all docking poses given by **ClassyPose** (our best-performing SVM model) and three existing scoring functions (Smina, RF-Score-VS, CNN-Score). These scores would determine the outcome of pose selection and ligand ranking, depending on our six virtual screening schemes (as described in the manuscript).
+
+**ATTENTION:** in order to use our code, you need to set up the **protocol-env** environment beforehand. Please use the file *protocol-env.yml* in our **MLSF-protocol** repository: https://github.com/vktrannguyen/MLSF-protocol, and follow the instruction provided in the README file there.
+
+For further information and other queries, please contact **Dr. Viet-Khoa Tran-Nguyen** at: viet-khoa.tran-nguyen@u-paris.fr, or khoatnv1993@gmail.com.
+
+----------------------------------------------------------------------------------------------------
+
+**References:**
+
+<sup>[1]</sup> Wójcikowski, M., Kukiełka, M., Stepniewska-Dziubinska, M. M. & Siedlecki, P. Development of a protein-ligand extended connectivity (PLEC) fingerprint and its application for binding affinity predictions. *Bioinformatics* **35**, 1334–1341 (2019).
+
+<sup>[2]</sup> Koes, D. R., Baumgartner, M. P. & Camacho, C. J. Lessons learned in empirical scoring with smina from the CSAR 2011 benchmarking exercise. *J. Chem. Inf. Model.* **53**, 1893–1904 (2013).
+
+<sup>[3]</sup> Wójcikowski, M., Ballester, P. J. & Siedlecki, P. Performance of machine-learning scoring functions in structure-based virtual screening. *Sci. Rep.* **7**, 46710 (2017).
+
+<sup>[4]</sup> Ragoza, M., Hochuli, J., Idrobo, E., Sunseri, J. & Koes, D. R. Protein–ligand scoring with convolutional neural networks. *J. Chem. Inf. Model.* **57**, 942–957 (2017).
+
+<sup>[5]</sup> Tran-Nguyen, V. K., Junaid, M., Simeon, S. & Ballester, P. J. A practical guide to machine-learning scoring for structure-based virtual screening. *Nat. Protoc.* **18**, 3460–3511 (2023).
+
+<sup>[6]</sup> Mysinger, M. M., Carchia, M., Irwin, J. J. & Shoichet, B. K. Directory of useful decoys, enhanced (DUD-E): better ligands and decoys for better benchmarking. *J. Med. Chem.* **55**, 6582–6594 (2012).
+
+<sup>[7]</sup> Bauer, M. R., Ibrahim, T. M., Vogel, S. M. & Boeckler, F. M. Evaluation and optimization of virtual screening workflows with DEKOIS 2.0—a public library of challenging docking benchmark sets. *J. Chem. Inf. Model.* **53**, 1447–1462 (2013).
+
+----------------------------------------------------------------------------------------------------
+
+This work was carried out at the Unit of Functional and Adaptive Biology (BFA), Paris Cité University, France.
