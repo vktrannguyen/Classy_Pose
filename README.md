@@ -4,6 +4,6 @@
 
 You will find herein the code and data related to our paper:
 
-**Tran-Nguyen, V.K. & Taboureau, O. ClassyPose: A Machine-Learning Classification Model for Correct Ligand Pose Prediction (2024).**
+**Tran-Nguyen, V.K. & Taboureau, O. ClassyPose: A Machine-Learning Classification Model for Correct Ligand Pose Selection (2024).**
 
 
