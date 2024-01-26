@@ -4,32 +4,36 @@
 
 You will find herein the code and data related to our paper:
 
-**Tran-Nguyen, V.K. & Taboureau, O. ClassyPose: A Machine-Learning Classification Model for Correct Ligand Pose Selection (2024).**
+**Tran-Nguyen, V.K., Camproux, A.A. & Taboureau, O. ClassyPose: A Machine-Learning Classification Model for Correct Ligand Pose Selection (2024).**
 
-1. The code is stored in the **Code** folder:
+## Code
+
+The code is stored in the **Code** folder:
 
 - *PLEC_extraction.py*: the Python code for extracting PLEC<sup>[1]</sup> fingerprints from target-bound ligand poses (e.g., docking poses).
 - *Pose_Classification_Models.ipynb*: the Jupyter notebook for training, testing and evaluating machine-learning (ML) models for ligand pose classification. Here, we provide the code for four supervised learning algorithms: random forest (RF), extreme gradient boosting (XGB), support vector machine (SVM), and artificial neural network (ANN). The code for computing six evaluation metrics is also provided: ROC-AUC, PR-AUC, balanced accuracy, Matthews correlation coefficient, specificity, and recall.
 - *ClassyPose.ipynb*: the Jupyter notebook for training and applying **ClassyPose**, our best-performing pose classification model employing the SVM algorithm.
 
-2. All data are stored in the **Data** folder. Inside, you will find the following sub-folders:
+## Data
 
-2.1. The **training_data** sub-folder:
+All data are stored in the **Data** folder. Inside, you will find the following sub-folders:
+
+### The 'training_data' sub-folder:
 
 - *training_data_poses.csv*: the CSV data file for training our ML classification models in *Pose_Classification_Models.ipynb* and *ClassyPose.ipynb*.
 - *training_data_PLEC.zip*: the zipped CSV file containing all PLEC fingerprints of 21,647 ligand poses (both native and redocked) in our training set. You need to unzip this file (using the *unzip* command), then use it to train our ML classification models in *Pose_Classification_Models.ipynb* and *ClassyPose.ipynb*.
 
-2.2. The **test_data** sub-folder:
+### The 'test_data' sub-folder:
 
 - *test_data_poses.csv*: the CSV data file of our test set.
 - *test_data_PLEC.zip*: the zipped CSV file containing all PLEC fingerprints of 5,427 ligand poses (both native and redocked) in our test set. You need to unzip this file beforehand.
 
-2.3. The **hard_test_data** sub-folder:
+### The 'hard_test_data' sub-folder:
 
 - *hard_test_data_poses.csv*: the CSV data file of our hard test set.
 - *hard_test_data_PLEC.zip*: the zipped CSV file containing all PLEC fingerprints of 12,536 ligand poses (both native and redocked) in our hard test set. You need to unzip this file beforehand.
 
-2.4. The **test_results** and **hard_test_results** sub-folders:
+### The 'test_results' and 'hard_test_results' sub-folders:
 
 The scores that all ligand poses in the test and hard test sets received from each evaluated scoring function:
 
@@ -38,18 +42,18 @@ The scores that all ligand poses in the test and hard test sets received from ea
 - RF-Score-VS: scores issued by the RF-Score-VS v.2 scoring function<sup>[3]</sup>.
 - CNN-Score: scores issued by the CNN-Score scoring function<sup>[4]</sup>.
 
-2.5. The **cross_validation** sub-folder:
+### The 'cross_validation' sub-folder:
 
 - Inside **subsets**: the data related to our different sub-training and validation sets, including CSV data files and zipped CSV files containing all PLEC fingerprints.
 - Inside **results**: the classification results (good pose probability, pose classification) of our ML models (RF, XGB, SVM, ANN) on each validation set. We provide results of five training-test runs per learning algorithm.
 - Inside **test_on_training_set**: the classification results (good pose probability, pose classification) of our ML models (RF, XGB, SVM, ANN) on the entire training set. We provide results of five training-test runs per learning algorithm.
 
-2.6. The **clustering** sub-folder:
+### The 'clustering' sub-folder:
 
 - *all_Xtal_PLEC_IDs.csv*: the CSV file containing all PLEC fingerprints extracted from the co-crystallographic ligand poses (no redocked pose) of the 1,102 PDB entries retained for clustering.
 - *100_clusters.xlsx*: the clustering results of 1,102 PDB entries (100 clusters and their members) and their partition into the training set and the test set.
 
-2.7. The **virtual_screening** sub-folder:
+### The 'virtual_screening' sub-folder:
 
 Virtual screening results on five data sets whose targets are not part of the data used to train our ML models:
 
@@ -65,17 +69,17 @@ Inside each sub-folder listed above, you will find the following files:
 - The zipped mol2 file containing all docking poses of the successfully docked ligands in each data set.
 - The scores of all docking poses given by **ClassyPose** (our best-performing SVM model) and three existing scoring functions (Smina, RF-Score-VS, CNN-Score). These scores would determine the outcome of pose selection and ligand ranking, depending on our six virtual screening schemes (as described in the manuscript).
 
-**ATTENTION:** in order to use our code, you need to set up the **protocol-env** environment beforehand. Please use the file *protocol-env.yml* in our **MLSF-protocol** repository: https://github.com/vktrannguyen/MLSF-protocol, and follow the instruction provided in the README file there.
+## Attention
+
+To use our code, you need to set up the **protocol-env** environment beforehand. Please use the file *protocol-env.yml* in our **MLSF-protocol** repository: https://github.com/vktrannguyen/MLSF-protocol, and follow the instructions provided in the README file there.
 
 For further information and other queries, please contact **Dr. Viet-Khoa Tran-Nguyen** at: viet-khoa.tran-nguyen@u-paris.fr, or khoatnv1993@gmail.com.
 
-----------------------------------------------------------------------------------------------------
-
-**References:**
+## References
 
 <sup>[1]</sup> Wójcikowski, M., Kukiełka, M., Stepniewska-Dziubinska, M. M. & Siedlecki, P. Development of a protein-ligand extended connectivity (PLEC) fingerprint and its application for binding affinity predictions. *Bioinformatics* **35**, 1334–1341 (2019).
 
-<sup>[2]</sup> Koes, D. R., Baumgartner, M. P. & Camacho, C. J. Lessons learned in empirical scoring with smina from the CSAR 2011 benchmarking exercise. *J. Chem. Inf. Model.* **53**, 1893–1904 (2013).
+<sup>[2]</sup> Koes, D. R., Baumgartner, M. P. & Camacho, C. J. Lessons learned in empirical scoring with Smina from the CSAR 2011 benchmarking exercise. *J. Chem. Inf. Model.* **53**, 1893–1904 (2013).
 
 <sup>[3]</sup> Wójcikowski, M., Ballester, P. J. & Siedlecki, P. Performance of machine-learning scoring functions in structure-based virtual screening. *Sci. Rep.* **7**, 46710 (2017).
 
@@ -89,4 +93,4 @@ For further information and other queries, please contact **Dr. Viet-Khoa Tran-N
 
 ----------------------------------------------------------------------------------------------------
 
-This work was carried out at the Unit of Functional and Adaptive Biology (BFA), Paris Cité University, France.
+This work was carried out at the Unit of Functional and Adaptive Biology (BFA), INSERM U1133, CNRS UMR8251, Université Paris Cité, France. The latest version of all data and code provided herein was updated and made available free of charge on January 26, 2024, and is subject to copyright.
