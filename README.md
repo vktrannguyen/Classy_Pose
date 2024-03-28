@@ -71,7 +71,17 @@ Inside each sub-folder listed above, you will find the following files:
 
 ## Attention
 
-To use our code, you need to set up the **protocol-env** environment beforehand. Please use the file *protocol-env.yml* in our **MLSF-protocol** repository: https://github.com/vktrannguyen/MLSF-protocol, and follow the instructions provided in the README file there.
+To use our code, you need to install **Python (v.3.7)** and set up the **protocol-env** environment beforehand. Please use the file *protocol-env.yml* in our **MLSF-protocol** repository: https://github.com/vktrannguyen/MLSF-protocol, and follow the instructions provided in the README file there.
+
+In brief, the following Python libraries/packages need to be installed:
+
+- pandas (v.0.23.4)
+- oddt (v.0.7)
+- NumPy (v.1.21.5)
+- sklearn (v.1.0.2)
+- XGBoost (v.2.0.1)
+- joblib (v.1.1.0)
+- tqdm (v.4.62.3)
 
 For further information and other queries, please contact **Dr. Viet-Khoa Tran-Nguyen** at: viet-khoa.tran-nguyen@u-paris.fr, or khoatnv1993@gmail.com.
 
