@@ -2,7 +2,7 @@
 
 ![Graphical_Abstract](https://github.com/vktrannguyen/Classy_Pose/blob/main/ClassyPose_GraphicalAbstract.jpg)
 
-You will find herein the code and data related to our paper:
+You will find herein the code and data related to our *Advanced Intelligent Systems* paper:
 
 **Tran-Nguyen, V.K., Camproux, A.C. & Taboureau, O. ClassyPose: A Machine-Learning Classification Model for Ligand Pose Selection Applied to Virtual Screening in Drug Discovery. *Adv. Intell. Syst.* (accepted, in production) (2024).**
 
