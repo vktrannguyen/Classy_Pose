@@ -4,7 +4,11 @@
 
 You will find herein the code and data related to our paper:
 
-**Tran-Nguyen, V.K., Camproux, A.C. & Taboureau, O. ClassyPose: A Machine-Learning Classification Model for Ligand Pose Selection Applied to Virtual Screening in Drug Discovery (2024).**
+**Tran-Nguyen, V.K., Camproux, A.C. & Taboureau, O. ClassyPose: A Machine-Learning Classification Model for Ligand Pose Selection Applied to Virtual Screening in Drug Discovery. *Adv. Intell. Syst.* (accepted, in production) (2024).**
+
+## Workflow
+
+![Workflow](https://github.com/vktrannguyen/Classy_Pose/blob/main/ClassyPose_Workflow.png)
 
 ## Code
 
