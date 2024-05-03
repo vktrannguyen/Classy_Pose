@@ -8,7 +8,7 @@ You will find herein the code and data related to our *Advanced Intelligent Syst
 
 ## Workflow
 
-![Workflow](https://github.com/vktrannguyen/Classy_Pose/blob/main/ClassyPose_Workflow.png)
+![Workflow](https://github.com/vktrannguyen/Classy_Pose/blob/main/ClassyPose_Workflow.jpg)
 
 ## Code
 
