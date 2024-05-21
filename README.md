@@ -4,7 +4,10 @@
 
 You will find herein the code and data related to our *Advanced Intelligent Systems* paper:
 
-**Tran-Nguyen, V.K., Camproux, A.C. & Taboureau, O. ClassyPose: A Machine-Learning Classification Model for Ligand Pose Selection Applied to Virtual Screening in Drug Discovery. *Adv. Intell. Syst.* (accepted, in production) (2024).**
+**Tran-Nguyen, V.-K., Camproux, A.-C. and Taboureau, O. (2024), ClassyPose: A Machine-Learning Classification Model for Ligand Pose Selection Applied to Virtual Screening in Drug Discovery. *Adv. Intell. Syst.* 2400238.**
+
+https://onlinelibrary.wiley.com/doi/10.1002/aisy.202400238
+
 
 ## Workflow
 
